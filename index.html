@@ -5,6 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/public/favicon-16x16.png">
+    <link rel="shortcut icon" href="./src/public/favicon.ico" />
+    <link rel="manifest" href="./src/public/site.webmanifest" />
     <title>Invest Hub Kg</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="src/js/tailwind.js"></script>
@@ -13,16 +18,30 @@
 <body>
 
 
-<header class="p-[30px_0_5px] border-b border-b-solid border-b-orange">
+<header class="p-[30px_0_5px] border-b border-b-solid border-b-orange sm:sticky sm:w-full sm:top-0 sm:left-0 sm:bg-[#fff]">
     <div class="container">
         <nav class="flex items-center justify-between">
             <h1>
-                <img class="w-full" src="./src/assets/logo.png" alt="logo">
+                <img class="w-full" src="./src/assets/logo.svg" alt="logo">
             </h1>
-            <div class="flex items-center gap-[44px]">
-                <a href="#" class="text-[23px] text-primary hover:text-orange">О Компании</a>
-                <a href="#" class="text-[23px] text-primary hover:text-orange">Услуги</a>
-                <a href="#" class="text-[23px] text-primary hover:text-orange">Преимущества</a>
+
+            <div class="hidden sm:flex burger-lines">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label class="burger" for="burger-checkbox"></label>
+            </div>
+
+            <div class="flex sm:hidden items-center gap-[44px]">
+                <a href="#about" class="text-[23px] text-primary hover:text-orange">О Компании</a>
+                <a href="#services" class="text-[23px] text-primary hover:text-orange">Услуги</a>
+                <a href="#advantages" class="text-[23px] text-primary hover:text-orange">Преимущества</a>
+                <a href="#" class="text-[23px] text-primary hover:text-orange">Проекты</a>
+                <a href="#" class="text-[23px] text-primary hover:text-orange">Контакты</a>
+            </div>
+
+            <div class="hidden sm:flex flex-col gap-[20px] bg-[#fff] menu">
+                <a href="#about" class="text-[23px] text-primary hover:text-orange">О Компании</a>
+                <a href="#services" class="text-[23px] text-primary hover:text-orange">Услуги</a>
+                <a href="#advantages" class="text-[23px] text-primary hover:text-orange">Преимущества</a>
                 <a href="#" class="text-[23px] text-primary hover:text-orange">Проекты</a>
                 <a href="#" class="text-[23px] text-primary hover:text-orange">Контакты</a>
             </div>
@@ -31,18 +50,126 @@
 </header>
 
 <main class="p-[49px_0_156px]">
-    <section class="p-[88px_0_258px] bg-[url('./src/assets/bg.png')] bg-no-repeat bg-cover">
+    <section id="about" class="p-[88px_0_258px] bg-[url('./src/assets/bg.png')] bg-no-repeat bg-cover">
         <div class="container">
                 <h2 class="text-[85px] font-black text-[#fff]">Invest <span class="text-orange">Hub</span></h2>
-                <p class="text-[#fff] text-[25px]">
+                <p class="text-[#fff] text-[25px] mt-[25px]">
                     это ваш надежный партнер в мире инвестиций. <br>
                     Мы помогаем предпринимателям и стартапам найти инвесторов <br>
                     и реализовать самые амбициозные проекты.
                 </p>
         </div>
     </section>
+
+    <section id="services" class="pt-[135px]">
+        <div class="container">
+            <h2 class="text-primary text-[50px] xs:text-[40px] font-black border-b border-b-solid border-b-orange pb-[58px] xs:pb-[30px] xs:leading-[50px]">Что мы предлагаем:</h2>
+            <div class="grid grid-cols-12 md:grid-cols-8 xs:grid-cols-4 gap-x-[30px] gap-y-[30px] mt-[78px] xs:mt-[48px]">
+                <div class="col-span-3 md:col-span-4 bg-primary p-[18px_15px_51px]">
+                    <div class="border-b border-b-solid border-b-[#fff] h-[78px]">
+                        <h3 class="text-[#fff] text-[25px] font-bold">
+                            Комплексный подход
+                        </h3>
+                    </div>
+                    <p class="text-gray mt-[20px] text-[20px]">
+                        от разработки инвестиционной стратегии
+                        до привлечения финансирования.
+                    </p>
+                </div>
+                <div class="col-span-3 md:col-span-4 bg-primary p-[18px_15px_51px]">
+                    <div class="border-b border-b-solid border-b-[#fff] h-[78px]">
+                        <h3 class="text-[#fff] text-[25px] font-bold">
+                            Экспертиза
+                        </h3>
+                    </div>
+                    <p class="text-gray mt-[20px] text-[20px]">
+                        глубокое знание рынка и отраслевых особенностей.
+                    </p>
+                </div>
+                <div class="col-span-3 md:col-span-4 bg-primary p-[18px_15px_51px]">
+                    <div class="border-b border-b-solid border-b-[#fff] h-[78px]">
+                        <h3 class="text-[#fff] text-[25px] font-bold">
+                            Широкая сеть контактов
+                        </h3>
+                    </div>
+                    <p class="text-gray mt-[20px] text-[20px]">
+                        доступ
+                        к потенциальным инвесторам.
+                    </p>
+                </div>
+                <div class="col-span-3 md:col-span-4 bg-primary p-[18px_15px_51px]">
+                    <div class="border-b border-b-solid border-b-[#fff] h-[78px]">
+                        <h3 class="text-[#fff] text-[25px] font-bold">
+                            Индивидуальный подход
+                        </h3>
+                    </div>
+                    <p class="text-gray mt-[20px] text-[20px]">
+                        подберем оптимальные условия для каждого проекта.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="pt-[135px]">
+        <div class="container">
+            <h2 class="text-primary text-[50px] xs:text-[40px] font-black xs:leading-[50px]">
+                Наши приоритетные направления:
+            </h2>
+            <div class="mt-[89px] border-[2px] border-solid border-primary p-[40px] xs:p-[20px]">
+                <div class="grid grid-cols-12 md:grid-cols-8 xs:grid-cols-4 gap-[30px]">
+                    <div class="col-span-4 md:col-span-4">
+                        <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0" src="./src/assets/hand.svg" alt="">
+                        <div class="pl-[50px] xs:pl-0">
+                            <h3 class="text-[25px] text-primaryBlack font-bold m-[30px_0_20px]">Растениеводство</h3>
+                            <p class="text-[20px] text-secondBlack">от традиционных культур до инновационных технологий.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 md:col-span-4">
+                        <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0" src="./src/assets/trade.svg" alt="">
+                        <div class="pl-[50px] xs:pl-0">
+                            <h3 class="text-[25px] text-primaryBlack font-bold m-[30px_0_20px]">Торговые операции</h3>
+                            <p class="text-[20px] text-secondBlack">оптимизация логистических цепочек и расширение рынков сбыта</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 md:col-span-4">
+                        <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0"  src="./src/assets/it.svg" alt="">
+                        <div class="pl-[50px] xs:pl-0">
+                            <h3 class="text-[25px] text-primaryBlack font-bold m-[30px_0_20px]">IT</h3>
+                            <p class="text-[20px] text-secondBlack">поддержка перспективных стартапов и технологических компаний</p>
+
+                        </div>
+                    </div>
+                    <div class="col-span-4 md:col-span-4">
+                        <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0" src="./src/assets/build.svg" alt="">
+                        <div class="pl-[50px] xs:pl-0">
+                            <h3 class="text-[25px] text-primaryBlack font-bold m-[30px_0_20px]">Строительство</h3>
+                            <p class="text-[20px] text-secondBlack">развитие инфраструктуры и недвижимости</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 md:col-span-4">
+                        <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0" src="./src/assets/maining.svg" alt="">
+                        <div class="pl-[50px] xs:pl-0">
+                            <h3 class="text-[25px] text-primaryBlack font-bold m-[30px_0_20px]">Добыча и переработка драгоценных металлов и камней</h3>
+                            <p class="text-[20px] text-secondBlack">инвестиции в недра Кыргызстана.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 md:col-span-4">
+                        <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0"  src="./src/assets/greentech.svg" alt="">
+                      <div class="pl-[50px] xs:pl-0">
+                          <h3 class="text-[25px] text-primaryBlack font-bold m-[30px_0_20px]">Зелёные технологии</h3>
+                          <!--                        <p class="text-[20px] text-secondBlack">от традиционных культур до инновационных технологий.</p>-->
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 
+
+<script src="./src/js/mian.js"></script>
 </body>
 </html>

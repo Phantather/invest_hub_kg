@@ -9,6 +9,7 @@
     outline: none;
     transition: .5s all;
     font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -20,7 +21,6 @@ body {
     --secondBlack: #1F1F1F;
     --white: #F2F2F2;
     --gray: #CDC2C2;
-    scroll-behavior: smooth;
 }
 
 .container {
@@ -28,4 +28,69 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+.burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 50px;
+    height: 26px;
+    margin: 30px auto;
+}
+.burger::before,
+.burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: var(--primary);
+}
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 var(--primary);
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+}
+.burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+.burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+}
+
+.burger-lines {
+    position: relative;
+    z-index: 4;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 120px 30px 0;
+    border-left: 1px solid var(--orange);
+    transform: translateX(101%);
+}
+
+.menu-active {
+    transform: translateX(0);
 }
