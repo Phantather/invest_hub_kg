@@ -34,16 +34,16 @@
                 <a href="#about" class="text-[23px] text-primary hover:text-orange">О Компании</a>
                 <a href="#services" class="text-[23px] text-primary hover:text-orange">Услуги</a>
                 <a href="#advantages" class="text-[23px] text-primary hover:text-orange">Преимущества</a>
-                <a href="#" class="text-[23px] text-primary hover:text-orange">Проекты</a>
-                <a href="#" class="text-[23px] text-primary hover:text-orange">Контакты</a>
+                <a href="#projects" class="text-[23px] text-primary hover:text-orange">Проекты</a>
+                <a href="#contacts" class="text-[23px] text-primary hover:text-orange">Контакты</a>
             </div>
 
             <div class="hidden sm:flex flex-col gap-[20px] bg-[#fff] menu">
                 <a href="#about" class="text-[23px] text-primary hover:text-orange">О Компании</a>
                 <a href="#services" class="text-[23px] text-primary hover:text-orange">Услуги</a>
                 <a href="#advantages" class="text-[23px] text-primary hover:text-orange">Преимущества</a>
-                <a href="#" class="text-[23px] text-primary hover:text-orange">Проекты</a>
-                <a href="#" class="text-[23px] text-primary hover:text-orange">Контакты</a>
+                <a href="#projects" class="text-[23px] text-primary hover:text-orange">Проекты</a>
+                <a href="#contacts" class="text-[23px] text-primary hover:text-orange">Контакты</a>
             </div>
         </nav>
     </div>
@@ -52,7 +52,7 @@
 <main class="p-[49px_0_156px]">
     <section id="about" class="p-[88px_0_258px] bg-[url('./src/assets/bg.png')] bg-no-repeat bg-cover">
         <div class="container">
-                <h2 class="text-[85px] font-black text-[#fff]">Invest <span class="text-orange">Hub</span></h2>
+                <h2 class="text-[85px] font-black text-[#fff] xs:leading-[100px]">Invest <span class="text-orange">Hub</span></h2>
                 <p class="text-[#fff] text-[25px] mt-[25px]">
                     это ваш надежный партнер в мире инвестиций. <br>
                     Мы помогаем предпринимателям и стартапам найти инвесторов <br>
@@ -116,7 +116,7 @@
             <h2 class="text-primary text-[50px] xs:text-[40px] font-black xs:leading-[50px]">
                 Наши приоритетные направления:
             </h2>
-            <div class="mt-[89px] border-[2px] border-solid border-primary p-[40px] xs:p-[20px]">
+            <div class="mt-[89px] xs:mt-[60px] border-[2px] border-solid border-primary p-[40px] xs:p-[20px]">
                 <div class="grid grid-cols-12 md:grid-cols-8 xs:grid-cols-4 gap-[30px]">
                     <div class="col-span-4 md:col-span-4">
                         <img class="w-[105px] h-[105px] m-[0_auto] xs:m-0" src="./src/assets/hand.svg" alt="">
@@ -166,7 +166,52 @@
             </div>
         </div>
     </section>
+
+    <section id="projects" class="pt-[135px]"_53px>
+        <div class="container">
+            <h2 class="text-primary text-[50px] xs:text-[40px] font-black xs:leading-[50px]">
+                Почему выбирают нас:
+            </h2>
+            <div class="flex flex-col gap-[50px] xs:gap-[30px] mt-[89px] xs:mt-[60px]">
+                <ul class="p-[34px_53px] xs:p-[34px] bg-secondOrange">
+                    <li class="text-[30px] xs:text-[25px]  font-bold list-disc xs:list-none">
+                        Успешные кейсы: <span class="text-[25px] xs:text-[20px]  font-normal">портфолио реализованных проектов.</span>
+                    </li>
+                </ul>
+                <ul class="p-[34px_53px] xs:p-[34px] bg-secondOrange">
+                    <li class="text-[30px] xs:text-[25px]  font-bold list-disc xs:list-none">
+                        Прозрачность: <span class="text-[25px] xs:text-[20px] font-normal">открытая и честная работа с каждым клиентом.</span>
+                    </li>
+                </ul>
+                <ul class="p-[34px_53px] xs:p-[34px] bg-secondOrange">
+                    <li class="text-[30px] xs:text-[25px] font-bold list-disc xs:list-none">
+                        Конфиденциальность: <span class="text-[25px] xs:text-[20px] font-normal">защита коммерческой тайны.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
+
+<footer id="contacts" class="p-[75px_0_90px] bg-primary">
+    <div class="container">
+        <h2 class="text-[35px] text-[#fff] font-black leading-[49px]">
+            Готовы вывести ваш бизнес на новый уровень?
+        </h2>
+        <p class="m-[16px_0_60px] text-[25px] text-[#fff] font-bold leading-[25px]">Свяжитесь с нами уже сегодня!</p>
+        <div class="grid-cols-12 md:grid-cols-8 xs:grid-cols-4 gap-[30px]">
+            <div class="col-span-3 md:col-span-4">
+                <h3 class="text-[25px] text-[#fff] font-bold mb-[15px]">Контакты:</h3>
+                <a class="text-[20px] text-[#fff]" href="tel:+996(999)999-999">+996(999)999-999</a>
+                <div class="flex gap-[10px] mt-[5px]">
+                    <a class="icon-instagram text-[34px] text-[#fff]" href="#"></a>
+                    <a class="icon-whatsapp text-[34px] text-[#fff]" href="#"></a>
+                    <a class="icon-telegram text-[34px] text-[#fff]" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 
